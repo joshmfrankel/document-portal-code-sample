@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: teacher_portal_production
-  username: teacher_portal
-  password: <%= ENV["TEACHER_PORTAL_DATABASE_PASSWORD"] %>
+  database: <%= ENV["PG_DB"] %>
+  username: <%= ENV["PG_USERNAME"] %>
+  password: <%= ENV["PG_PASSWORD"] %>
