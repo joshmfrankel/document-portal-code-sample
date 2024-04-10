@@ -28,4 +28,8 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      user:
+        welcome: "Welcome, %{name}"
+
