@@ -1,0 +1,11 @@
+<% if signed_in? %>
+  <div class="p-5 flex justify-between sticky top-0 bg-gray-100 border-b-gray-200 border-b">
+    <div>
+      <%= link_to t(".links.root"), root_path %>
+    </div>
+    <nav>
+      <%= link_to t(".links.documents"), documents_path %>
+      <%= link_to t(".links.sign_out", name: current_user.email), destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: t(".confirmations.are_you_sure") } %>
+    </nav>
+  </div>
+<% end %>
