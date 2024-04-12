@@ -28,13 +28,8 @@
 #       enabled: "ON"
 
 en:
-  confirmations:
-    are_you_sure: Are you sure?
   layouts:
-    navbar:
-      links:
-        root: Teacher Portal
-        documents: Documents
-        sign_out: "Sign Out: %{name}"
-
+    application:
+      user:
+        welcome: "Welcome, %{name}"
 
