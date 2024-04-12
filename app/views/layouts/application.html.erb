@@ -12,16 +12,12 @@
   </head>
 
   <body class="h-full">
-    <% if signed_in? %>
-      <div>
-        <%= t(".user.welcome", name: current_user.email) %>
+    <%= render partial: "layouts/navbar" %>
 
-        <nav>
-          <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %>
-        </nav>
-      </div>
-    <% end %>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block w-fit" id="notice"><%= notice %></p>
+      <% end %>
       <%= yield %>
     </main>
   </body>
