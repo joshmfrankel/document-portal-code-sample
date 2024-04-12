@@ -36,5 +36,3 @@ en:
         root: Teacher Portal
         documents: Documents
         sign_out: "Sign Out: %{name}"
-
-
