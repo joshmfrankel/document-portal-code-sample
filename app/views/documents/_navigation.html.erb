@@ -1,4 +1,17 @@
-<div class="flex gap-2">
+<div class="flex gap-4">
+  <div data-controller="clipboard" data-clipboard-success-content-value="Copied!" class="flex gap-2">
+    <span data-clipboard-target="button"></span>
+    <span class="hidden">
+      <input type="text" value="<%= public_document_url(document.uuid) %>" data-clipboard-target="source" />
+    </span>
+
+    <button title="Copy Public URL" type="button" data-action="clipboard#copy" class="w-6 h-fit p-0 border-0">
+      <span class="block w-6 h-fit text-seafoam-400">
+        <%= heroicon "clipboard" %>
+      </span>
+    </button>
+  </div>
+
   <% unless action_name == "show" %>
     <%= link_to document, class: "w-6 h-fit", title: "Show Document" do  %>
       <%= heroicon "eye" %>
