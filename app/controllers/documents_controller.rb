@@ -3,24 +3,30 @@ class DocumentsController < ApplicationController
 
   # GET /documents or /documents.json
   def index
+    authorize Document
+
     @documents = Document.all
   end
 
   # GET /documents/1 or /documents/1.json
   def show
+    authorize @document
   end
 
   # GET /documents/new
   def new
     @document = Document.new
+    authorize @document
   end
 
   # GET /documents/1/edit
   def edit
+    authorize @document
   end
 
   # POST /documents or /documents.json
   def create
+    authorize Document
     @document = Document.new(document_params.merge(uploader: current_user))
 
     respond_to do |format|
@@ -36,6 +42,8 @@ class DocumentsController < ApplicationController
 
   # PATCH/PUT /documents/1 or /documents/1.json
   def update
+    authorize @document
+
     respond_to do |format|
       if @document.update(document_params.merge(uploader: current_user))
         format.html { redirect_to document_url(@document), notice: "Document was successfully updated." }
@@ -49,6 +57,7 @@ class DocumentsController < ApplicationController
 
   # DELETE /documents/1 or /documents/1.json
   def destroy
+    authorize @document
     @document.destroy!
 
     respond_to do |format|
