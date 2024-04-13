@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :documents
+    resources :users
+
+    root to: "documents#index"
+  end
+
   namespace :public do
     get 'documents/:id', to: "documents#show", as: :document
   end
+
   resources :documents
   devise_for :users
 
