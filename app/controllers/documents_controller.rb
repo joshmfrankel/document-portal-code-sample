@@ -8,17 +8,6 @@ class DocumentsController < ApplicationController
 
   # GET /documents/1 or /documents/1.json
   def show
-    @markdown = Redcarpet::Markdown.new(
-      Redcarpet::Render::HTML,
-      autolink: true,
-      tables: true,
-      fenced_code_blocks: true,
-      strikethrough: true,
-      superscript: true,
-      underline: true,
-      highlight: true,
-      footnotes: true
-    )
   end
 
   # GET /documents/new
@@ -32,7 +21,7 @@ class DocumentsController < ApplicationController
 
   # POST /documents or /documents.json
   def create
-    @document = Document.new(document_params)
+    @document = Document.new(document_params.merge(uploader: current_user))
 
     respond_to do |format|
       if @document.save
@@ -48,7 +37,7 @@ class DocumentsController < ApplicationController
   # PATCH/PUT /documents/1 or /documents/1.json
   def update
     respond_to do |format|
-      if @document.update(document_params)
+      if @document.update(document_params.merge(uploader: current_user))
         format.html { redirect_to document_url(@document), notice: "Document was successfully updated." }
         format.json { render :show, status: :ok, location: @document }
       else

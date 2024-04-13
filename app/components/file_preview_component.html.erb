@@ -1,0 +1,8 @@
+<% case content_type_category %>
+<% when :image %>
+  <%= image_tag @document.file %>
+<% when :markdown %>
+  <%= markdown.render(@document.file.download).html_safe %>
+<% when :default %>
+  <%= link_to document.file.filename, document.file %>
+<% end %>
