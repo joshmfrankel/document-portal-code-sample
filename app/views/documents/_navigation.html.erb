@@ -1,0 +1,17 @@
+<div class="flex gap-2">
+  <% unless action_name == "show" %>
+    <%= link_to document, class: "w-6 h-fit", title: "Show Document" do  %>
+      <%= heroicon "eye" %>
+    <% end %>
+  <% end %>
+
+  <% unless action_name == "edit" %>
+    <%= link_to edit_document_path(document), class: "w-6 h-fit", title: "Edit Document" do  %>
+      <%= heroicon "pencil" %>
+    <% end %>
+  <% end %>
+
+  <%= link_to document_path(document), class: "w-6 h-fit", title: "Delete Document", data: { turbo_method: :delete, turbo_confirm: t("confirmations.are_you_sure") } do  %>
+    <%= heroicon "trash" %>
+  <% end %>
+</div>

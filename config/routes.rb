@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :public do
+    get 'documents/:id', to: "documents#show"
+  end
   resources :documents
   devise_for :users
 
