@@ -28,8 +28,16 @@
 #       enabled: "ON"
 
 en:
+  flash:
+    unauthorized: You are not authorized to perform this action.
   confirmations:
     are_you_sure: Are you sure?
+  documents:
+    index:
+      empty:
+        description: Upload your first document to get started sharing content.
+    show:
+      back: "<< Back to Documents"
   layouts:
     navbar:
       links:

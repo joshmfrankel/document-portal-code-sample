@@ -26,12 +26,8 @@ class DocumentPolicy < ApplicationPolicy
     Pundit.policy_scope!(user, Document).exists?(record.id)
   end
 
-  def edit?
-    show?
-  end
-
   def update?
-    edit?
+    show?
   end
 
   def destroy?

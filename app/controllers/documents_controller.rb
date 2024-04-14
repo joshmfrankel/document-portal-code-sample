@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
   def index
     authorize Document
 
-    @documents = Document.all
+    @documents = policy_scope(Document)
   end
 
   # GET /documents/1 or /documents/1.json
