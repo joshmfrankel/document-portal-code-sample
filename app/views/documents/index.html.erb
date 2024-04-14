@@ -5,6 +5,15 @@
   </div>
 
   <div id="documents" class="min-w-full divide-y gap-2 flex flex-col">
-    <%= render @documents %>
+    <% if @documents.exists? %>
+      <%= render @documents %>
+    <% else %>
+      <div class="border-gray-200 border rounded-md p-10">
+        <div class="flex flex-col gap-4 items-center">
+          <p><%= t(".empty.description") %></p>
+          <%= link_to "New document", new_document_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
