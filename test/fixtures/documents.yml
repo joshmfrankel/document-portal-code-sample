@@ -3,5 +3,6 @@
 one:
   name: MyString
 
-two:
-  name: MyString
+teacher_document_1:
+  name: Markdown
+  uploader: teacher

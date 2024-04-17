@@ -26,4 +26,8 @@ class FilePreviewComponent < ApplicationComponent
       :default
     end
   end
+
+  def render?
+    @document.file.attached?
+  end
 end

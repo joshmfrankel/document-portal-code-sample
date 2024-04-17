@@ -1,0 +1,22 @@
+<div class="w-full">
+  <div class="flex justify-between items-center mb-2">
+    <h1 class="font-bold text-4xl">Students</h1>
+
+    <% if policy(User).new? %>
+      <%= link_to "New user", new_user_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <% end %>
+  </div>
+
+  <div id="users" class="min-w-full divide-y gap-2 flex flex-col">
+    <% if @users.exists? %>
+      <%= render @users %>
+    <% else %>
+      <div class="border-gray-200 border rounded-md p-10">
+        <div class="flex flex-col gap-4 items-center">
+          <p><%= t(".empty.description") %></p>
+          <%= link_to "New user", new_user_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

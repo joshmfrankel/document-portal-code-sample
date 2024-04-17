@@ -1,5 +1,9 @@
 <div class="border-gray-200 border rounded-md p-10">
   <div class="flex gap-4 justify-center">
     <%= link_to "View Documents", documents_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+
+    <% if policy(User).index? %>
+      <%= link_to "View Students", users_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+    <% end %>
   </div>
 </div>

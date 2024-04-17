@@ -1,9 +1,8 @@
 require "test_helper"
-
 class DocumentsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    sign_in users(:one)
-    @document = documents(:one)
+    sign_in users(:teacher)
+    @document = documents(:teacher_document_1)
   end
 
   context "GET #index" do

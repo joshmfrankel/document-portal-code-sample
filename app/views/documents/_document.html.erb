@@ -1,17 +1,24 @@
 <div id="<%= dom_id document %>">
   <div class="flex justify-between items-center">
     <div class="flex-1">
-      <span class="my-5">
-        <strong class="block font-medium mb-1">Name:</strong>
-        <%= document.name %>
-      </span>
+      <div class="flex gap-2">
+        <strong class="block mb-1">Name:</strong>
+        <p><%= document.name %></p>
+      </div>
 
-      <span class="my-5">
-        <strong class="block font-medium mb-1">File:</strong>
+      <% if document.uploader.present? %>
+        <div class="flex gap-2">
+          <strong class="block mb-1">Teacher:</strong>
+          <p><%= document.uploader.email %></p>
+        </div>
+      <% end %>
+
+      <div class="flex gap-2">
+        <strong class="block mb-1">File:</strong>
         <% if document.file.attached? %>
           <%= link_to document.file.filename, document.file %>
         <% end %>
-      </span>
+      </div>
     </div>
 
     <%= render partial: "navigation", locals: { document: } %>
