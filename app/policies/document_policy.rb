@@ -6,7 +6,12 @@ class DocumentPolicy < ApplicationPolicy
     end
 
     def resolve
-      scope.where(uploader: user)
+      scope
+        .where(uploader: user)
+        .or(
+          scope
+            .where(uploader: user.creator)
+        )
     end
 
     private
@@ -27,7 +32,7 @@ class DocumentPolicy < ApplicationPolicy
   end
 
   def update?
-    show?
+    show? && record.uploader == user
   end
 
   def destroy?

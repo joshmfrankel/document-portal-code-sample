@@ -1,0 +1,12 @@
+<div id="<%= dom_id user %>" class="pt-2">
+  <div class="flex justify-between items-center">
+    <div class="flex-1">
+      <div class="flex gap-2">
+        <strong class="block mb-1">Email:</strong>
+        <p><%= user.email %></p>
+      </div>
+    </div>
+
+    <%= render partial: "navigation", locals: { user: } %>
+  </div>
+</div>

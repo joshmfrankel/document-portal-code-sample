@@ -1,0 +1,4 @@
+markdown_file_attachment:
+  name: Markdown sample
+  record: teacher_document_1 (Document)
+  blob: markdown_file_blob

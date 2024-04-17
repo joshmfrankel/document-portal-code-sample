@@ -8,4 +8,7 @@ class User < ApplicationRecord
     teacher: "teacher",
     student: "student"
   }
+
+  belongs_to :creator, class_name: :User, optional: true
+  has_many :students, class_name: :User, foreign_key: :creator_id
 end

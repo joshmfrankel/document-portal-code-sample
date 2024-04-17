@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
   private
 
   def user_not_authorized
+    $stdout.puts "Pundit::NotAuthorizedError" if Rails.env.test?
+
     flash[:alert] = t("flash.unauthorized")
 
     redirect_back(fallback_location: root_path)

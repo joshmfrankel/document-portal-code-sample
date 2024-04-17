@@ -1,0 +1,19 @@
+  <div class="flex gap-4">
+    <% if action_name != "show" && policy(user).show? %>
+      <%= link_to user, class: "w-6 h-fit", title: "Show User" do  %>
+        <%= heroicon "eye" %>
+      <% end %>
+    <% end %>
+
+    <% if action_name != "edit" && policy(user).edit? %>
+      <%= link_to edit_user_path(user), class: "w-6 h-fit", title: "Edit User" do  %>
+        <%= heroicon "pencil" %>
+      <% end %>
+    <% end %>
+
+    <% if policy(user).destroy? %>
+      <%= link_to user_path(user), class: "w-6 h-fit", title: "Delete User", data: { turbo_method: :delete, turbo_confirm: t("confirmations.are_you_sure") } do  %>
+        <%= heroicon "trash" %>
+      <% end %>
+    <% end %>
+  </div>

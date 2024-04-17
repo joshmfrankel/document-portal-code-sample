@@ -38,6 +38,10 @@ en:
         description: Upload your first document to get started sharing content.
     show:
       back: "<< Back to Documents"
+  users:
+    index:
+      empty:
+        description: No Students yet.
   layouts:
     navbar:
       links:
