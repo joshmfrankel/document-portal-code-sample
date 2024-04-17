@@ -3,7 +3,7 @@
     <h1 class="font-bold text-4xl">Documents</h1>
 
     <% if policy(Document).new? %>
-      <%= link_to "New document", new_document_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+      <%= link_to "New document", new_document_path, class: "rounded-lg py-3 px-5 bg-ultramarine-blue-400 hover:brightness-110 text-white block font-medium" %>
     <% end %>
   </div>
 
@@ -14,7 +14,7 @@
       <div class="border-gray-200 border rounded-md p-10">
         <div class="flex flex-col gap-4 items-center">
           <p><%= t(".empty.description") %></p>
-          <%= link_to "New document", new_document_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+          <%= link_to "New document", new_document_path, class: "rounded-lg py-3 px-5 bg-ultramarine-blue-400 hover:brightness-110 text-white block font-medium w-fit" %>
         </div>
       </div>
     <% end %>

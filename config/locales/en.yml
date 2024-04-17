@@ -42,9 +42,18 @@ en:
     index:
       empty:
         description: No Students yet.
+  home:
+    index:
+      hero:
+        title: Markdown and File upload for your students
+        description: Easily upload and share Markdown documents for your students. Effortlessly manage your teaching materials and share document URLs via email, Slack, and more. Simplify your teaching process and support your students' learning journey. Join now to transform your classroom experience!
+      cta:
+        documents: View Documents
+        students: View Students
   layouts:
     navbar:
       links:
         root: Teacher Portal
         documents: Documents
+        students: Students
         sign_out: "Sign Out: %{name}"

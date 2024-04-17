@@ -10,9 +10,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      /**
+       * Colors picked from codepath.org
+       */
       colors: {
         seafoam: {
           400: "#00C385"
+        },
+        space: {
+          400: "#1b1c57"
+        },
+        "prussian-blue": {
+          400: "#062f54"
+        },
+        "ultramarine-blue": {
+          400: "#4f5eff"
         }
       },
       fontFamily: {
