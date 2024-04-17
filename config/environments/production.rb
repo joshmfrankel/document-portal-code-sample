@@ -24,7 +24,8 @@ Rails.application.configure do
   # config.public_file_server.enabled = false
 
   # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
+  # Fixes: SassC::SyntaxError: Error: Function rgb is missing argument $green. (SassC::SyntaxError)
+  config.assets.css_compressor = nil
 
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false

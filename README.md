@@ -33,3 +33,4 @@
 * Heroicons - https://github.com/bharget/heroicon
 * TailwindCSS - https://github.com/rails/tailwindcss-rails
 * Administrate - https://administrate-demo-prerelease.herokuapp.com/getting_started
+* Pundit - https://github.com/varvet/pundit

@@ -28,6 +28,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
+  # Fixes: SassC::SyntaxError: Error: Function rgb is missing argument $green. (SassC::SyntaxError)
   config.assets.css_compressor = nil
 
   # Render exception templates for rescuable exceptions and raise for other exceptions.
