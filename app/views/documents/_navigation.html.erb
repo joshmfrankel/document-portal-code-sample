@@ -1,6 +1,6 @@
 <div class="flex gap-4">
   <div data-controller="clipboard" data-clipboard-success-content-value="Copied!" class="flex gap-2">
-    <span data-clipboard-target="button"></span>
+    <span data-clipboard-target="button" class="text-green-500"></span>
     <span class="hidden">
       <input type="text" value="<%= public_document_url(document.uuid) %>" data-clipboard-target="source" />
     </span>

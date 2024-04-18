@@ -1,8 +1,11 @@
 <% if signed_in? %>
   <div class="p-5 flex justify-between sticky top-0 bg-prussian-blue-400 text-white border-b-gray-200 border-b">
     <div>
-      <%= link_to t(".links.root"), root_path, class: navbar_link_classes(root_path) %>
+      <%= link_to root_path, class: "text-seafoam-400 flex flex-row", title: t(".links.root") do %>
+        <%= heroicon "academic-cap", options: { class: "w-6" } %>
+      <% end %>
     </div>
+
     <nav class="flex gap-4">
       <%= link_to t(".links.documents"), documents_path, class: navbar_link_classes(documents_path) %>
 

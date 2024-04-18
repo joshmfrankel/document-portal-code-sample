@@ -51,6 +51,10 @@
     @apply text-3xl mb-2;
   }
 
+  h2 {
+    @apply text-xl font-bold mb-2;
+  }
+
   p,
   span {
     @apply text-space-400;
