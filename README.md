@@ -1,6 +1,14 @@
 # Teacher Portal
 
+**Production**: https://teacher-markdown-portal.onrender.com/
+
 ## Requirements
+
+**Github Project**: [https://github.com/users/joshmfrankel/projects/7/views/1](https://github.com/users/joshmfrankel/projects/7/views/1)
+
+**Pitch Document**: [https://github.com/joshmfrankel/teacher-markdown-portal/blob/main/pitch.md](https://github.com/joshmfrankel/teacher-markdown-portal/blob/main/pitch.md)
+
+This is an architectural document used to organize and plan project decisions. This was copied from the associated Github project which contains all related issues and pull requests.
 
 ### MVP
 * A way for teachers to sign up and create their accounts

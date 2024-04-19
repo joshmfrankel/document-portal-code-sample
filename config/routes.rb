@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :public do
     get 'documents/:id', to: "documents#show", as: :document
+    get 'health_checks', to: "health_checks#index"
   end
 
   resources :documents
