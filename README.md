@@ -1,6 +1,7 @@
 # Teacher Portal
 
 **Production**: https://teacher-markdown-portal.onrender.com/
+**Admin Portal** https://teacher-markdown-portal.onrender.com/admin
 
 ## Requirements
 
